@@ -52,7 +52,7 @@ npm-debug.log
 yarn-error.log
 
 # Angular build & cache
-dist/
+dist-angular/
 .tmp/
 .cache/
 .aot/
