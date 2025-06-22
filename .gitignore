@@ -1,0 +1,100 @@
+### .NET Core ###
+# Build & Binaries
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+[Bb]in/
+[Oo]bj/
+artifacts/
+publish/
+*.exe
+*.dll
+*.pdb
+*.config
+*.cache
+*.suo
+*.user
+*.userprefs
+
+# NuGet
+**/[Pp]ackages/*
+!**/[Pp]ackages/build/
+*.nupkg
+.nuget/
+NuGet.exe
+
+# VS & Rider
+.vs/
+.vscode/
+.idea/
+*.sln.iml
+*.csproj.user
+*.DotSettings.user
+
+# Test Results
+[Tt]est[Rr]esult*/
+TestResult.xml
+*.trx
+*.coverage
+
+# Logs & Temp
+logs/
+*.log
+*.tmp
+*.temp
+*.bak
+
+### Angular ###
+# Node & npm
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Angular build & cache
+dist/
+.tmp/
+.cache/
+.aot/
+.ng/
+.storybook/
+
+# IDE
+.angular/
+*.ngsummary.json
+
+# Testing
+coverage/
+karma-report.xml
+/cypress/screenshots/
+/cypress/videos/
+
+### Electron ###
+# Electron build output
+release/
+out/
+dist-electron/
+*.app
+*.dmg
+*.snap
+*.deb
+*.rpm
+
+# Electron cache & logs
+electron-builder-cache.json
+electron-builder.yaml
+electron-builder.env
+*.log.*
+*.log
+
+### macOS ###
+.DS_Store
+._*
+
+### Windows ###
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+### Linux ###
+*~
