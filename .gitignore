@@ -73,6 +73,7 @@ karma-report.xml
 # Electron build output
 release/
 out/
+dist/
 dist-electron/
 *.app
 *.dmg

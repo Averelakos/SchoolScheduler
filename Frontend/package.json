@@ -4,13 +4,13 @@
   "type": "module",
   "main": "./dist-electron/main.js",
   "scripts": {
-    "dev": "npm-run-all --parallel start dev:electron",
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "ng build --base-href ./",
     "watch": "ng build --watch --configuration development",
+    "dev": "npm-run-all --parallel start electron",
+    "electron": "npm run transpile:electron&& cross-env NODE_ENV=development electron .",
     "transpile:electron": "tsc --project src/electron/tsconfig.json",
-    "dev:electron": "npm run transpile:electron&& cross-env NODE_ENV=development electron .",
     "dist:win": "npm run transpile:electron && npm run build && electron-builder --win --x64"
   },
   "private": true,

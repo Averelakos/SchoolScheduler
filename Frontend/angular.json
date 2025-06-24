@@ -41,7 +41,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist-angular/school-scheduler",
+            "outputPath": "dist-angular",
             "index": "src/angular/index.html",
             "browser": "src/angular/main.ts",
             "polyfills": [
