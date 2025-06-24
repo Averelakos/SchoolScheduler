@@ -9,7 +9,7 @@
         // define where to put generated JS
         "outDir": "../../dist-electron",
         // // Only compile Electron files
-        // "rootDir": "./src/electron",
+        "rootDir": ".",
         // ignore errors from dependencies
         "skipLibCheck": true,
         // add global types

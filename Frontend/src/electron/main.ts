@@ -1,13 +1,11 @@
-import {app, BrowserWindow} from 'electron'
-import { isDev } from './utils.js'
-import { getPreloadPath } from './path-resolver.js'
+import SchoolScheduler from "./main/application/school-scheduler.js";
 
-app.on('ready', () => {
-   const mainWindow =  new BrowserWindow({
-    webPreferences: {
-            preload: getPreloadPath(),
-        },
-   })
+new SchoolScheduler()
+// const dir = path.resolve()
+// const __filename = fileURLToPath(import.meta.url);
+// const __dirname = path.dirname(__filename);
+// console.log('Main process:', dir, __dirname, __filename)
 
-   if (isDev())mainWindow.loadURL('http://localhost:4200')
-})
+// process.on('uncaughtException', (error) => {
+//   console.error('Uncaught Exception:', error);
+// });
