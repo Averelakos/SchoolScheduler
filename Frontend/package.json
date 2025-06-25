@@ -1,15 +1,19 @@
 {
   "name": "school-scheduler",
   "version": "0.0.0",
-    "type": "module",
-  "main": "src/electron/main",
+  "type": "module",
+  "main": "dist/dist-electron/main",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
     "build:base": "ng build --base-href ./",
     "watch": "ng build --watch --configuration development",
-    "electron": "electron ."
+    "electron": "npm run transpile:electron&& cross-env NODE_ENV=development electron .",
+    "transpile:electron": "tsc --project src/electron/tsconfig.json",
+    "clean": "rimraf dist",
+    "prebuild": "npm run clean",
+    "dev": "npm-run-all --parallel build:base electron"
   },
   "private": true,
   "dependencies": {
@@ -29,7 +33,14 @@
     "@angular-devkit/build-angular": "^18.0.7",
     "@angular/cli": "^18.0.7",
     "@angular/compiler-cli": "^18.0.0",
+    "@types/lodash": "^4.17.18",
+    "@types/node": "^24.0.3",
+    "cross-env": "^7.0.3",
     "electron": "^37.0.0",
+    "lodash": "^4.17.21",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^3.6.1",
+    "rimraf": "^6.0.1",
     "typescript": "~5.4.2"
   }
 }
