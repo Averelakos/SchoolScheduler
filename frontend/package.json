@@ -2,18 +2,16 @@
   "name": "school-scheduler",
   "version": "0.0.0",
   "type": "module",
-  "main": "dist/dist-electron/main",
+  "main": "dist-electron/main.js",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-    "build:base": "ng build --base-href ./",
     "watch": "ng build --watch --configuration development",
-    "electron": "npm run transpile:electron&& cross-env NODE_ENV=development electron .",
+    "test": "ng test",
     "transpile:electron": "tsc --project src/electron/tsconfig.json",
-    "clean": "rimraf dist",
-    "prebuild": "npm run clean",
-    "dev": "npm-run-all --parallel start electron"
+    "dev:electron": "npm run transpile:electron&& cross-env NODE_ENV=development electron .",
+    "dev": "npm-run-all --parallel start dev:electron"
   },
   "private": true,
   "dependencies": {
@@ -27,20 +25,18 @@
     "@angular/router": "^18.0.0",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
-    "zone.js": "~0.14.3"
+    "zone.js": "~0.14.3",
+    "axios": "^1.10.0"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "^18.0.7",
     "@angular/cli": "^18.0.7",
     "@angular/compiler-cli": "^18.0.0",
-    "@types/lodash": "^4.17.18",
-    "@types/node": "^24.0.4",
-    "cross-env": "^7.0.3",
-    "electron": "^37.0.0",
-    "lodash": "^4.17.21",
-    "npm-run-all": "^4.1.5",
+    "@types/electron": "^1.6.12",
+    "electron": "^36.5.0",
+    "typescript": "~5.4.2",
     "prettier": "^3.6.1",
-    "rimraf": "^6.0.1",
-    "typescript": "~5.4.2"
+    "cross-env": "^7.0.3",
+    "npm-run-all": "^4.1.5"
   }
 }
