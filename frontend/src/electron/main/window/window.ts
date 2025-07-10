@@ -1,6 +1,6 @@
 import { app, BrowserWindow, Menu } from 'electron'
 import path from 'path'
-import { isDev } from '../../utils.js'
+import { isDev } from '../../utils/is-development.js'
 import { getUIPath } from '../../utils/path-resolver.js'
 
 export default class Window {

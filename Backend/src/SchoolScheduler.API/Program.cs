@@ -16,7 +16,7 @@ app.MapGet("/api/hello", () =>
 //     return new { Message = "Hello from Minimal API!" };
 // });
 app.MapGet("/api/ping", () => new { message = "Pong from .NET" });
-// app.MapPost("/api/echo", (dynamic data) => new { original = data });
+app.MapPost("/api/echo", (dynamic data) => new { original = data });
 
 // app.MapPost("/api/echo", ([FromBody]dynamic data) =>
 // {
