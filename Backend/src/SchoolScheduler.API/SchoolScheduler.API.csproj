@@ -11,4 +11,10 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\SchoolScheduler.Application\SchoolScheduler.Application.csproj" />
+    <ProjectReference Include="..\SchoolScheduler.Domain\SchoolScheduler.Domain.csproj" />
+    <ProjectReference Include="..\SchoolScheduler.Infrastructure\SchoolScheduler.Infrastructure.csproj" />
+  </ItemGroup>
+
 </Project>

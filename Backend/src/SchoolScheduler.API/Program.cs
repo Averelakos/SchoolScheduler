@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 
 var builder = WebApplication.CreateBuilder(args);
 var app = builder.Build();
+app.Configure(app.Environment);
 // app.UseCors(policy => policy.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
 
 // Minimal API endpoints
@@ -25,5 +26,6 @@ app.MapPost("/api/echo", (dynamic data) => new { original = data });
 // });
 
 // Security: Only allow localhost
-app.Urls.Add("http://localhost:5000");
+// app.Urls.Add("http://localhost:5000");
 app.Run();
+
