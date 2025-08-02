@@ -1,11 +1,13 @@
 import { Component } from '@angular/core'
+import { RouterOutlet } from '@angular/router'
 import { from } from 'rxjs'
 
 @Component({
-  selector: 'app-root',
+  selector: 'layout',
   standalone: true,
-  template: '<button (click)="gethello()">Test</button>',
-  styles: ''
+  imports: [RouterOutlet],
+  templateUrl: 'layout.component.html',
+  styleUrl: 'layout.component.scss'
 })
 export class LayoutComponent {
   gethello() {
