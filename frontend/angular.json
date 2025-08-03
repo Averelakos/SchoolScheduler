@@ -32,7 +32,9 @@
               }
             ],
             "styles": [
-              "src/angular/styles.scss"
+              "node_modules/remixicon/fonts/remixicon.css",
+              "src/angular/styles.scss",
+              "public/styles/main.scss"
             ],
             "scripts": []
           },

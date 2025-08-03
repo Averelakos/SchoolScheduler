@@ -1,0 +1,91 @@
+.logo {
+    position: relative;
+    vertical-align: top;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 23px;
+    text-decoration: none;
+    color: inherit;
+    user-select: none;
+    strong {
+        font-weight: bold;
+    }
+    .version {
+        position: absolute;
+        right: 0;
+        top: -5px;
+        line-height: 1;
+        font-size: 10px;
+        font-weight: normal;
+        padding: 2px 4px;
+        border-radius: var(--baseRadius);
+        background: var(--dangerAltColor);
+        color: var(--txtPrimaryColor);
+    }
+
+    &.logo-sm {
+        font-size: 20px;
+    }
+}
+
+
+.thumb {
+    --thumbSize: 40px;
+
+    display: inline-flex;
+    vertical-align: top;
+    position: relative;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+    width: var(--thumbSize);
+    height: var(--thumbSize);
+    aspect-ratio: 1;
+    background: var(--baseAlt2Color);
+    border-radius: var(--baseRadius);
+    color: var(--txtPrimaryColor);
+    outline-offset: -2px;
+    outline: 2px solid transparent;
+    @include shadowize();
+    i {
+        font-size: inherit;
+    }
+    img {
+        width: 100%;
+        height: 100%;
+        border-radius: inherit;
+        overflow: hidden;
+    }
+    .initials {
+        text-transform: uppercase;
+        margin-top: -2px;
+    }
+    &.thumb-xs {
+        --thumbSize: 24px;
+        font-size: 0.85rem;
+    }
+    &.thumb-sm {
+        --thumbSize: 32px;
+        font-size: 0.92rem;
+    }
+    &.thumb-lg {
+        --thumbSize: 60px;
+        font-size: 1.3rem;
+    }
+    &.thumb-xl {
+        --thumbSize: 80px;
+        font-size: 1.5rem;
+    }
+    &.thumb-circle {
+        border-radius: 50%;
+    }
+
+    // styles
+    @each $name, $color in $colorsMap {
+        &.thumb-#{$name} {
+            outline-color: $color;
+        }
+    }
+}

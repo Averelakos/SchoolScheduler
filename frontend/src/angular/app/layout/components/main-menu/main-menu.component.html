@@ -1,0 +1,11 @@
+<div class="main-menu">
+    @for (item of menuItems(); track item.label) {
+        <a 
+        class="menu-item"
+        [routerLink]="item.route"
+        routerLinkActive="active"
+        >
+            <app-icon [name]="'database-2'"></app-icon>    
+        </a>
+    }
+</div>

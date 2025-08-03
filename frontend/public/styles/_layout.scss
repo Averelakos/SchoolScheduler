@@ -1,0 +1,93 @@
+// Sidebar
+//..............................
+.main-menu {
+    --menuItemSize: 45px;
+
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: var(--smSpacing);
+    font-size: var(--xlFontSize);
+    color: var(--txtPrimaryColor);
+    
+    i {
+        font-size: 24px;
+        line-height: 1;
+    }
+    .menu-item {
+        position: relative;
+        outline: 0;
+        cursor: pointer;
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        user-select: none;
+        color: inherit;
+        min-width: var(--menuItemSize);
+        min-height: var(--menuItemSize);
+        border: 2px solid transparent;
+        border-radius: var(--lgRadius);
+        transition: background var(--baseAnimationSpeed),
+                    border var(--baseAnimationSpeed);
+        &:focus-visible,
+        &:hover {
+            background: var(--baseAlt1Color);
+        }
+        &:active {
+            background: var(--baseAlt2Color);
+            transition-duration: var(--activeAnimationSpeed);
+        }
+        &.active,
+        &.current-route {
+            background: var(--baseColor);
+            border-color: var(--primaryColor);
+        }
+    }
+}
+
+.sidebar-container {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-direction: column;
+    align-items: center;
+    width: var(--appSidebarWidth);
+    padding: var(--smSpacing) 0px var(--smSpacing);
+    background: var(--baseColor);
+    border-right: 1px solid var(--baseAlt2Color);
+    .main-menu {
+        flex-grow: 1;
+        justify-content: flex-start;
+        overflow-x: hidden;
+        overflow-y: auto; /* fallback */
+        overflow-y: overlay;
+        // "visual" vertical alignment
+        margin-top: 34px;
+        margin-bottom: var(--baseSpacing);
+    }
+}
+// Layout Container
+//..............................
+.app-layout {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+
+    .body-container {
+        flex-grow: 1;
+        min-width: 0;
+        height: 100%;
+        display: flex;
+        align-items: stretch;
+    }
+
+    .sidebar-container ~ .body-container {
+        min-width: 650px;
+    }
+}
