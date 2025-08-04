@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { MainMenuComponent } from '../main-menu/main-menu.component';
+import { Component } from '@angular/core'
+import { MainMenuComponent } from '../main-menu/main-menu.component'
 
 @Component({
   selector: 'sidebar',
@@ -8,6 +8,4 @@ import { MainMenuComponent } from '../main-menu/main-menu.component';
   templateUrl: './sidebar.component.html',
   styleUrl: './sidebar.component.scss'
 })
-export class SidebarComponent {
-
-}
+export class SidebarComponent {}

@@ -1,10 +1,9 @@
-import { Component, Signal } from '@angular/core';
-import { MenuService } from '../../../core/services/menu.service';
-import { Menu } from '../../../core/models/menu';
-import { NgFor } from '@angular/common';
-import { RouterLink, RouterLinkActive } from '@angular/router';
-import { IconComponent } from '../../../common/components/icon.component';
-
+import { NgFor } from '@angular/common'
+import { Component, Signal } from '@angular/core'
+import { RouterLink, RouterLinkActive } from '@angular/router'
+import { IconComponent } from '../../../common/components/icon.component'
+import { Menu } from '../../../core/models/menu'
+import { MenuService } from '../../../core/services/menu.service'
 
 @Component({
   selector: 'main-menu',
